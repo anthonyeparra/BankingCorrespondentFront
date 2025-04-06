@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button"
 import { MapPin } from "lucide-react"
 import type { Correspondent } from "@/lib/data"
+import Link from "next/link"
 
 interface CorrespondentCardProps {
   correspondent: Correspondent
@@ -26,7 +27,9 @@ export function CorrespondentCard({ correspondent }: CorrespondentCardProps) {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full">Seleccionar</Button>
+        <Link href={`/correspondent/${correspondent.correspondent_id}`} className="w-full">
+          <Button className="w-full">Seleccionar</Button>
+        </Link>
       </CardFooter>
     </Card>
   )
