@@ -31,7 +31,7 @@ export function OperationForm({ correspondentId, refreshCorrespondent, transacti
   const [errorMessage, setErrorMessage] = useState(
     "No es posible realizar esta operación. Contacte con el administrador del sistema."
   )
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL
+  const apiUrl = "https://4jve2k1hc2.execute-api.us-east-1.amazonaws.com/dev"
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

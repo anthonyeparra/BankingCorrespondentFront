@@ -9,7 +9,7 @@ interface AuthContextType {
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
-const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL
+const apiUrl = "https://4jve2k1hc2.execute-api.us-east-1.amazonaws.com/dev"
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [token, setToken] = useState<string | null>(null)
@@ -61,6 +61,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const logout = () => {
     setToken(null)
     localStorage.removeItem("token")
+    localStorage.removeItem("user")
   }
 
   if (isLoading) {

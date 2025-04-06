@@ -13,7 +13,7 @@ import { Correspondent, ApiResponseCorrespondent, TransactionType, ApiResponseTr
 import { formatCurrency } from "@/lib/utils"
 import { useAuth } from "@/context/auth-context"
 import { use } from "react"
-const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL
+const apiUrl = "https://4jve2k1hc2.execute-api.us-east-1.amazonaws.com/dev"
 
 
 export default function CorrespondentPage({ params }: { params: Promise<{ id: string }> }) {

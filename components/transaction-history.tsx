@@ -23,7 +23,7 @@ export function TransactionHistory({ correspondentId, transactionTypes, reloadKe
     const [transactions, setTransactions] = useState<Transaction[]>([])
     const { token } = useAuth()
     const [filter, setFilter] = useState<string>("0")
-    const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL
+    const apiUrl = "https://4jve2k1hc2.execute-api.us-east-1.amazonaws.com/dev"
 
     useEffect(() => {
 
